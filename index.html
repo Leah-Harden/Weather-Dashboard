@@ -8,15 +8,135 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
+    <!-- header -->
+    <nav class="navbar bg-primary p-3" data-bs-theme="dark">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">What is the Weather like?</span>
+        </div>
+    </nav>
+    <!-- header -->
+    <!-- container for everything  -->
+    <div class="container-fluid">
+        <div class="row m-3">
+            <!-- container for everything -->
+            <!-- everything that is to the side -->
+            <aside class="col-3 p-3">
+                <h2 class="m-2">Search for a City</h2>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <hr>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="button">Button</button>
+                    <button class="btn btn-primary" type="button">2Button</button>
+                    <button class="btn btn-primary" type="button">3Button</button>
+                    <button class="btn btn-primary" type="button">4Button</button>
+                    <button class="btn btn-primary" type="button">5Button</button>
+                    <button class="btn btn-primary" type="button">6Button</button>
+                </div>
+            </aside>
 
+            <!-- everything that is to the side -->
+            <!-- main -->
 
+            <div class="card col-9 p-3">
+                <div class="card-header">
+                    <h1 class="card-title">Florida<span>-date-</span></h1>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>Temp:</li>
+                        <li>Wind:</li>
+                        <li>Humidity:</li>
+                    </ul>
+                </div>
+                <!-- cards -->
 
+                <div class="row d-flex justify-content-evenly">
+
+                    <!-- card one -->
+                    <div class="card m-2" style="width: 14rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">icon!</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">2/02/2023</h6>
+                            <ul>
+                                <li>Temp:</li>
+                                <li>Wind:</li>
+                                <li>Humidity:</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- card one -->
+                    <!-- card two -->
+                    <div class="card m-2" style="width: 14rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">icon!</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">2/02/2023</h6>
+                            <ul>
+                                <li>Temp:</li>
+                                <li>Wind:</li>
+                                <li>Humidity:</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- card two -->
+                    <!-- card three -->
+                    <div class="card m-2" style="width: 14rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">icon!</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">2/02/2023</h6>
+                            <ul>
+                                <li>Temp:</li>
+                                <li>Wind:</li>
+                                <li>Humidity:</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- card three -->
+                    <!-- card four -->
+                    <div class="card m-2" style="width: 14rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">icon!</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">2/02/2023</h6>
+                            <ul>
+                                <li>Temp:</li>
+                                <li>Wind:</li>
+                                <li>Humidity:</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- card four -->
+                    <!-- card five -->
+                    <div class="card m-2" style="width: 14rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">icon!</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">2/02/2023</h6>
+                            <ul>
+                                <li>Temp:</li>
+                                <li>Wind:</li>
+                                <li>Humidity:</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- card five -->
+
+                </div>
+                <!-- cards -->
+            </div>
+            <!-- main -->
+        </div>
+    </div>
+
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
