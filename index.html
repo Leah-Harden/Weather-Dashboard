@@ -11,9 +11,9 @@
     <link href="style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-gradient">
     <!-- header -->
-    <nav class="navbar bg-primary p-3" data-bs-theme="dark">
+    <nav class="navbar p-3 blue-green" data-bs-theme="dark">
         <div class="container-fluid">
             <span class="navbar-brand mb-0 h1">What is the Weather like?</span>
         </div>
@@ -32,12 +32,12 @@
                 </form>
                 <hr>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-primary" type="button">Button</button>
-                    <button class="btn btn-primary" type="button">2Button</button>
-                    <button class="btn btn-primary" type="button">3Button</button>
-                    <button class="btn btn-primary" type="button">4Button</button>
-                    <button class="btn btn-primary" type="button">5Button</button>
-                    <button class="btn btn-primary" type="button">6Button</button>
+                    <button class="btn blue" type="button">Atlanta</button>
+                    <button class="btn light-blue" type="button">Denver</button>
+                    <button class="btn blue" type="button">Seattle</button>
+                    <button class="btn light-blue" type="button">Orlando</button>
+                    <button class="btn blue" type="button">New York</button>
+                    <button class="btn light-blue" type="button">Chicago</button>
                 </div>
             </aside>
 
@@ -50,13 +50,14 @@
                 </div>
                 <div class="card-body">
                     <ul>
-                        <li>Temp:</li>
-                        <li>Wind:</li>
-                        <li>Humidity:</li>
+                        <li>Avg Temp:</li>
+                        <li>Avg Wind:</li>
+                        <li>Avg Humidity:</li>
                     </ul>
                 </div>
+                <h2>5-day forcast: Mon-Fri</h2>
+                <hr>
                 <!-- cards -->
-
                 <div class="row d-flex justify-content-evenly">
 
                     <!-- card one -->
@@ -124,7 +125,6 @@
                         </div>
                     </div>
                     <!-- card five -->
-
                 </div>
                 <!-- cards -->
             </div>
@@ -136,6 +136,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 

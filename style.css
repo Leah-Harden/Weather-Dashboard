@@ -1,0 +1,22 @@
+:root {
+    --blue-green: #187898;
+    --light-blue: #5cbfd6;
+    --blue: #2492b7;
+}
+
+.blue-green {
+    background-color: var(--blue-green);
+}
+
+.light-blue {
+    background-color: var(--light-blue);
+}
+
+.blue {
+    background-color: var(--blue);
+    color: white;
+}
+
+.bg-gradient {
+    background-image: linear-gradient(red, yellow);
+}
