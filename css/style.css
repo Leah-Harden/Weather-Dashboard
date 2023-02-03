@@ -17,6 +17,7 @@
     color: white;
 }
 
-.bg-gradient {
-    background-image: linear-gradient(red, yellow);
+.vs-gradient {
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(176, 233, 230));
+    height: 100vh;
 }
