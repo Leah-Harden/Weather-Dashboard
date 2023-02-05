@@ -33,11 +33,11 @@
                 <hr>
                 <div class="d-grid gap-2">
                     <button class="btn blue" id="AtlantaBtn" type="button">Atlanta</button>
-                    <button class="btn light-blue" type="button">Denver</button>
-                    <button class="btn blue" type="button">Seattle</button>
+                    <button class="btn light-blue" id="DenverBtn" type="button">Denver</button>
+                    <button class="btn blue" id="BeijingBtn" type="button">Beijing</button>
                     <button class="btn light-blue" id="OrlandoBtn" type="button">Orlando</button>
-                    <button class="btn blue" type="button">New York</button>
-                    <button class="btn light-blue" type="button">Chicago</button>
+                    <button class="btn blue" id="NewYorkBtn" type="button">New York</button>
+                    <button class="btn light-blue" id="TokyoBtn" type="button">Tokyo</button>
                 </div>
             </aside>
 
@@ -46,13 +46,13 @@
 
             <div class="card col-9 p-3">
                 <div class="card-header">
-                    <h1 class="card-title">Orlando<span id="top-date">-date-</span></h1>
+                    <h1 class="card-title">Orlando <span id="top-date">-date-</span></h1>
                 </div>
                 <div class="card-body">
                     <ul>
-                        <li id="avgTemp">Avg Temp:</li>
-                        <li >Avg Wind: <span id="avgWind"></span></li>
-                        <li id="avgHumi">Avg Humidity:</li>
+                        <li>Avg Temp: <span id="avgTemp"></span><span>°F</span></li>
+                        <li>Avg Wind: <span id="avgWind"></span></li>
+                        <li>Avg Humidity: <span id="avgHumi"></span></li>
                     </ul>
                 </div>
                 <h2>5-day forcast: Mon-Fri</h2>
@@ -60,15 +60,17 @@
                 <!-- cards -->
                 <div class="row d-flex justify-content-evenly">
 
+
+                    
                     <!-- card one -->
                     <div class="card m-2" style="width: 14rem;">
                         <div class="card-body">
                             <h5 class="card-title">icon!</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">2/02/2023</h6>
+                            <h6 class="card-subtitle mb-2 text-muted" id="date1">2/02/2023</h6>
                             <ul>
-                                <li>Temp:</li>
-                                <li>Wind:</li>
-                                <li>Humidity:</li>
+                                <li>Temp: <span id="avgTemp1"></span><span>°F</span></li>
+                                <li>Wind: <span id="avgWind1"></span></li>
+                                <li>Humidity: <span id="avgHumi1"></span></li>
                             </ul>
                         </div>
                     </div>
@@ -77,11 +79,11 @@
                     <div class="card m-2" style="width: 14rem;">
                         <div class="card-body">
                             <h5 class="card-title">icon!</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">2/02/2023</h6>
+                            <h6 class="card-subtitle mb-2 text-muted"  id="date2">2/02/2023</h6>
                             <ul>
-                                <li>Temp:</li>
-                                <li>Wind:</li>
-                                <li>Humidity:</li>
+                                <li>Temp: <span id="avgTemp2"></span><span>°F</span></li>
+                                <li>Wind: <span id="avgWind2"></span></li>
+                                <li>Humidity: <span id="avgHumi2"></span></li>
                             </ul>
                         </div>
                     </div>
@@ -90,11 +92,11 @@
                     <div class="card m-2" style="width: 14rem;">
                         <div class="card-body">
                             <h5 class="card-title">icon!</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">2/02/2023</h6>
+                            <h6 class="card-subtitle mb-2 text-muted"  id="date3">2/02/2023</h6>
                             <ul>
-                                <li>Temp:</li>
-                                <li>Wind:</li>
-                                <li>Humidity:</li>
+                                <li>Temp: <span id="avgTemp3"></span><span>°F</span></li>
+                                <li>Wind: <span id="avgWind3"></span></li>
+                                <li>Humidity: <span id="avgHumi3"></span></li>
                             </ul>
                         </div>
                     </div>
@@ -103,11 +105,11 @@
                     <div class="card m-2" style="width: 14rem;">
                         <div class="card-body">
                             <h5 class="card-title">icon!</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">2/02/2023</h6>
+                            <h6 class="card-subtitle mb-2 text-muted"  id="date4">2/02/2023</h6>
                             <ul>
-                                <li>Temp:</li>
-                                <li>Wind:</li>
-                                <li>Humidity:</li>
+                                <li>Temp: <span id="avgTemp4"></span><span>°F</span></li>
+                                <li>Wind: <span id="avgWind4"></span></li>
+                                <li>Humidity: <span id="avgHumi4"></span></li>
                             </ul>
                         </div>
                     </div>
@@ -116,11 +118,11 @@
                     <div class="card m-2" style="width: 14rem;">
                         <div class="card-body">
                             <h5 class="card-title">icon!</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">2/02/2023</h6>
+                            <h6 class="card-subtitle mb-2 text-muted"  id="date5">2/02/2023</h6>
                             <ul>
-                                <li>Temp:</li>
-                                <li>Wind:</li>
-                                <li>Humidity:</li>
+                                <li>Temp: <span id="avgTemp5"></span><span>°F</span></li>
+                                <li>Wind: <span id="avgWind5"></span></li>
+                                <li>Humidity: <span id="avgHumi5"></span></li>
                             </ul>
                         </div>
                     </div>
