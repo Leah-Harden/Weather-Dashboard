@@ -1,6 +1,5 @@
-//api.openweathermap.org / data / 2.5 / forecast ? lat = { 28.5384 } & lon={ 81.3789 }& appid={API key }
 
-//var LatLon = ""
+
 var startUrl = "https://api.openweathermap.org/data/2.5/forecast?" ;
 var appId = 'appid=28c3589b9ea291ef8351565407890153&units=imperial'
 var LatLon = ""
@@ -9,10 +8,8 @@ var Url = startUrl + LatLon + appId
 
 $(document).ready(function() {
 //https://api.openweathermap.org/data/2.5/forecast?lat=28.5384&lon=-81.3789&appid=28c3589b9ea291ef8351565407890153&units=imperial
-LatLon = 'lat=28.5384&lon=-81.3789';
+var LatLon = 'lat=28.5384&lon=-81.3789';
 //var endpoint =
-
-
 fetch(Url, {
     method: 'POST'
 })
