@@ -2,6 +2,36 @@
 
 var startUrl = "https://api.openweathermap.org/data/2.5/forecast?" ;
 var appId = '&appid=28c3589b9ea291ef8351565407890153&units=imperial'
+var geoUrl = 'http://api.openweathermap.org/geo/1.0/direct?q='
+var appIdGeo ='&limit=1&appid=28c3589b9ea291ef8351565407890153'
+const inpCity = document.getElementById("searchBar");
+const city = inpCity.value;
+
+$(document).ready(function() { 
+    $("#form").submit(function(event){
+        event.preventDefault();
+        cityUrl = geoUrl + city + appIdGeo
+        fetch( cityUrl, {
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data)
+
+        });
+        console.log('hello')
+
+    });
+});
+
+//$( "#searchBar" ).submit(function( event ) {});
+
+
+
+
+
+
+
+
 
 
 $( function() {
@@ -12,6 +42,9 @@ $( function() {
         source: availableTags
     });
 });
+
+
+
 
 
 $(document).ready(function() {
