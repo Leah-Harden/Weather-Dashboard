@@ -17,8 +17,8 @@ $(document).ready(function() {
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)
-                var lat = data.lat
-                var lon = data.lon
+                var lat = data[0].lat
+                var lon = data[0].lon
                 
                 
             var Url = startUrl + 'lat='+ lat +'&lon=' + lon + appId
@@ -80,6 +80,7 @@ fetch(Url, {
 
 function fillingIn(data){
     console.log(data)
+    $("#cityName").text(data.city.name) 
     $("#top-date, #date1").text(data.list[0].dt_txt) 
     $("#avgWind, #avgWind1").text(data.list[0].wind.speed);
     $("#avgTemp, #avgTemp1").text(data.list[0].main.temp);
