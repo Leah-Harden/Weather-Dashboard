@@ -4,6 +4,15 @@ var startUrl = "https://api.openweathermap.org/data/2.5/forecast?" ;
 var appId = '&appid=28c3589b9ea291ef8351565407890153&units=imperial'
 
 
+$( function() {
+    var availableTags = [
+        'Orlando'
+    ];
+    $( "#searchBar" ).autocomplete({
+        source: availableTags
+    });
+});
+
 
 $(document).ready(function() {
     //https://api.openweathermap.org/data/2.5/forecast?lat=28.5384&lon=-81.3789&appid=28c3589b9ea291ef8351565407890153&units=imperial

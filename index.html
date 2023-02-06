@@ -27,17 +27,18 @@
             <aside class="col-3 p-3">
                 <h2 class="m-2">Search for a City</h2>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchBar">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
                 <hr>
-                <div class="d-grid gap-2">
+                <div class="d-grid gap-2" id="city-list">
                     <button class="btn blue" id="AtlantaBtn" type="button">Atlanta</button>
-                    <button class="btn light-blue" id="DenverBtn" type="button">Denver</button>
+                    <button class="btn blue" id="DenverBtn" type="button">Denver</button>
                     <button class="btn blue" id="BeijingBtn" type="button">Beijing</button>
-                    <button class="btn light-blue" id="OrlandoBtn" type="button">Orlando</button>
+                    <button class="btn blue" id="OrlandoBtn" type="button">Orlando</button>
                     <button class="btn blue" id="NewYorkBtn" type="button">New York</button>
-                    <button class="btn light-blue" id="TokyoBtn" type="button">Tokyo</button>
+                    <button class="btn blue" id="TokyoBtn" type="button">Tokyo</button>
+                    
                 </div>
             </aside>
 
@@ -140,6 +141,9 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.js"
         integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 
