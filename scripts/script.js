@@ -4,9 +4,11 @@ var startUrl = "https://api.openweathermap.org/data/2.5/forecast?" ;
 var appId = '&appid=28c3589b9ea291ef8351565407890153&units=imperial'
 var geoUrl = 'http://api.openweathermap.org/geo/1.0/direct?q='
 var appIdGeo ='&limit=1&appid=28c3589b9ea291ef8351565407890153'
-var cityList = document.querySelector('#cityList');
+var cityList = document.querySelector('#city-List');
 const inpCity = document.getElementById("searchBar");
 const city = inpCity.value;
+
+
 
 $(document).ready(function() { 
     $("#form").submit(function(event){
@@ -15,10 +17,7 @@ $(document).ready(function() {
         var cityTab = document.createElement('button');
         cityTab.classList = 'btn blue';
         cityTab.textContent = city 
-        cityTab.appendChild(cityList);
-
-
-
+        cityList.appendChild(cityTab);
         cityUrl = geoUrl + city + appIdGeo
         fetch( cityUrl, {
         })
@@ -27,6 +26,29 @@ $(document).ready(function() {
                 console.log(data)
                 var lat = data[0].lat
                 var lon = data[0].lon
+
+
+//this is what i working on
+                $("#DenverBtn").click(function(){
+                    LatLon =  'lat='+ lat +'&lon=' + lon ;
+                    var Url = startUrl + LatLon + appId
+                    fetch(Url, {
+                })
+                .then((response) => response.json())
+                .then((data) => {
+                    fillingIn(data)
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+                });
+bv
+//this is what i working on
+
+
+
+
+
             var Url = startUrl + 'lat='+ lat +'&lon=' + lon + appId
                     fetch(Url, {
                     })
@@ -42,7 +64,6 @@ $(document).ready(function() {
 
 
         });         
-        console.log('hello')
 
 });       
 
