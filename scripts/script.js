@@ -10,23 +10,38 @@ const city = inpCity.value;
 $(document).ready(function() { 
     $("#form").submit(function(event){
         event.preventDefault();
+        var city = $("#searchBar").val()
         cityUrl = geoUrl + city + appIdGeo
         fetch( cityUrl, {
         })
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)
-
-        });
-        console.log('hello')
-
+                var lat = data.lat
+                var lon = data.lon
+                
+                
+            var Url = startUrl + 'lat='+ lat +'&lon=' + lon + appId
+                
+                    fetch(Url, {
+                    })
+                    .then((response) => response.json())
+                    .then((data) => {
+                    fillingIn(data)
+                        
+                })
+                .catch((error) => {
+            console.error('Error:', error);
     });
 });
 
+
+        });         
+        console.log('hello')
+
+});       
+
 //$( "#searchBar" ).submit(function( event ) {});
-
-
-
 
 
 
