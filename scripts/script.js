@@ -115,11 +115,14 @@ fetch(Url, {
 
 function fillingIn(data){
     console.log(data)
-        //this is not working 
+
+    $("#cityName").text(data.city.name);
+
+
     icon1 = data.list[0].weather[0].icon
     picIcon = "http://openweathermap.org/img/w/" + icon1 + ".png";
     $("#icon1, #icon0").attr('src', picIcon);
-    //this is not working 
+
     $("#top-date, #date1").text(data.list[0].dt_txt) 
     $("#avgWind, #avgWind1").text(data.list[0].wind.speed);
     $("#avgTemp, #avgTemp1").text(data.list[0].main.temp);
