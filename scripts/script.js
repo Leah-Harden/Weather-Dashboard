@@ -8,10 +8,11 @@ var cityList = document.querySelector('#city-List');
 const inpCity = document.getElementById("searchBar");
 const city = inpCity.value;
 
-document.querySelectorAll('button.btn blue').forEach(button => {
-    button.addEventListener('click', searchCity);
+document.querySelectorAll('button.blue, button.btn').forEach(button => {
+    button.addEventListener("click", function () {
+        searchCity(button.textContent);
+    });
 });
-
 
 
 //orlando data
@@ -22,6 +23,9 @@ $(document).ready(function() {
         var cityTab = document.createElement('button');
         cityTab.classList = 'btn blue';
         cityTab.textContent = city 
+        cityTab.addEventListener("click", function() {
+            searchCity(city)
+        });
         cityList.appendChild(cityTab);
         cityUrl = geoUrl + city + appIdGeo
         fetch( cityUrl, {
@@ -49,11 +53,9 @@ $(document).ready(function() {
 
 
 
-
-//$( "#searchBar" ).submit(function( event ) {});
-
-function searchCity(e) {
-    var city = this.button.textContent
+// button search
+function searchCity(city) {
+    //  var city = this.button.textContent
     cityUrl = geoUrl + city + appIdGeo
         fetch( cityUrl, {
         })
@@ -69,15 +71,13 @@ function searchCity(e) {
                     .then((data) => {
                         console.log("is this working?")
                     fillingIn(data)
-                        
                 })
                 .catch((error) => {
                     console.error('Error:', error);
                 });
             });
         };
-
-
+// button search
 
 
 
@@ -120,7 +120,9 @@ fetch(Url, {
 
 function fillingIn(data){
     console.log(data)
-    $("#cityName").text(data.city.name) 
+    icon = data.list[0].weather.icon
+    picIcon = "http://openweathermap.org/img/w/" + icon + ".png";
+    $("#icon1, #icon0").attr('src', picIcon);
     $("#top-date, #date1").text(data.list[0].dt_txt) 
     $("#avgWind, #avgWind1").text(data.list[0].wind.speed);
     $("#avgTemp, #avgTemp1").text(data.list[0].main.temp);
