@@ -79,11 +79,6 @@ function searchCity(city) {
         };
 // button search
 
-
-
-
-
-
 $( function() {
     var availableTags = [
         'Orlando',
@@ -120,125 +115,45 @@ fetch(Url, {
 
 function fillingIn(data){
     console.log(data)
-    icon = data.list[0].weather.icon
-    picIcon = "http://openweathermap.org/img/w/" + icon + ".png";
+        //this is not working 
+    icon1 = data.list[0].weather[0].icon
+    picIcon = "http://openweathermap.org/img/w/" + icon1 + ".png";
     $("#icon1, #icon0").attr('src', picIcon);
+    //this is not working 
     $("#top-date, #date1").text(data.list[0].dt_txt) 
     $("#avgWind, #avgWind1").text(data.list[0].wind.speed);
     $("#avgTemp, #avgTemp1").text(data.list[0].main.temp);
     $("#avgHumi, #avgHumi1").text(data.list[0].main.humidity);
 
+    icon2 = data.list[8].weather[0].icon
+    picIcon = "http://openweathermap.org/img/w/" + icon2 + ".png";
+    $("#icon2").attr('src', picIcon);
     $("#date2").text(data.list[8].dt_txt);
     $("#avgWind2").text(data.list[8].wind.speed);
     $("#avgTemp2").text(data.list[8].main.temp);
     $("#avgHumi2").text(data.list[8].main.humidity);
-    
+
+    icon3 = data.list[16].weather[0].icon
+    picIcon = "http://openweathermap.org/img/w/" + icon3 + ".png";
+    $("#icon3").attr('src', picIcon);
     $("#date3").text(data.list[16].dt_txt);
     $("#avgWind3").text(data.list[16].wind.speed);
     $("#avgTemp3").text(data.list[16].main.temp);
     $("#avgHumi3").text(data.list[16].main.humidity);
 
+    icon4 = data.list[24].weather[0].icon
+    picIcon = "http://openweathermap.org/img/w/" + icon4 + ".png";
+    $("#icon4").attr('src', picIcon);
     $("#date4").text(data.list[24].dt_txt);
     $("#avgWind4").text(data.list[24].wind.speed);
     $("#avgTemp4").text(data.list[24].main.temp);
     $("#avgHumi4").text(data.list[24].main.humidity);
     
-    $("#date5").text(data.list[24].dt_txt);
-    $("#avgWind5").text(data.list[24].wind.speed);
-    $("#avgTemp5").text(data.list[24].main.temp);
-$("#avgHumi5").text(data.list[24].main.humidity);
+    icon5 = data.list[32].weather[0].icon
+    picIcon = "http://openweathermap.org/img/w/" + icon5 + ".png";
+    $("#icon5").attr('src', picIcon);
+    $("#date5").text(data.list[32].dt_txt);
+    $("#avgWind5").text(data.list[32].wind.speed);
+    $("#avgTemp5").text(data.list[32].main.temp);
+$("#avgHumi5").text(data.list[32].main.humidity);
     };
-
-
-
-
-
-
-
-
-    
-/*
-    $("#AtlantaBtn").click(function(){
-        LatLon = 'lat=33.753746&lon=-84.386330';
-        var Url = startUrl + LatLon + appId
-        fetch(Url, {
-})
-    .then((response) => response.json())
-    .then((data) => {
-        fillingIn(data)
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-});
-
-$("#DenverBtn").click(function(){
-    LatLon = 'lat=39.742043&lon=-104.991531';
-    var Url = startUrl + LatLon + appId
-    fetch(Url, {
-})
-.then((response) => response.json())
-.then((data) => {
-    fillingIn(data)
-})
-.catch((error) => {
-    console.error('Error:', error);
-});
-});
-
-$("#BeijingBtn").click(function(){
-    LatLon = 'lat=39.916668&lon=116.383331';
-    var Url = startUrl + LatLon + appId
-    fetch(Url, {
-})
-.then((response) => response.json())
-.then((data) => {
-    fillingIn(data)
-})
-.catch((error) => {
-    console.error('Error:', error);
-});
-});
-
-$("#OrlandoBtn").click(function(){
-    LatLon = 'lat=28.5384&lon=-81.3789';
-    var Url = startUrl + LatLon + appId
-    fetch(Url, {
-    })
-    .then((response) => response.json())
-    .then((data) => {
-        fillingIn(data)
-        
-    })
-.catch((error) => {
-    console.error('Error:', error);
-});
-});
-$("#NewYorkBtn").click(function(){
-    LatLon = 'lat=40.712776&lon=-74.005974';
-    var Url = startUrl + LatLon + appId
-    fetch(Url, {
-})
-.then((response) => response.json())
-.then((data) => {
-    fillingIn(data)
-})
-.catch((error) => {
-    console.error('Error:', error);
-});
-});
-
-$("#TokyoBtn").click(function(){
-    LatLon = 'lat=35.689487&lon=139.691711';
-    var Url = startUrl + LatLon + appId
-    fetch(Url, {
-})
-.then((response) => response.json())
-.then((data) => {
-    fillingIn(data)
-})
-.catch((error) => {
-    console.error('Error:', error);
-});
-});
-*/
