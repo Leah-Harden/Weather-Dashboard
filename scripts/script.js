@@ -31,32 +31,6 @@ $(document).ready(function() {
                 console.log(data)
                 var lat = data[0].lat
                 var lon = data[0].lon
-<<<<<<< HEAD
-hi
-
-//this is what i working on
-                $("#DenverBtn").click(function(){
-                    LatLon =  'lat='+ lat +'&lon=' + lon ;
-                    var Url = startUrl + LatLon + appId
-                    fetch(Url, {
-                })
-                .then((response) => response.json())
-                .then((data) => {
-                    fillingIn(data)
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
-                });
-bv
-//this is what i working on
-
-
-
-
-=======
->>>>>>> d47b842c29e6089f169c9a7fa85516522bfaaa3b
-
             var Url = startUrl + 'lat='+ lat +'&lon=' + lon + appId
                     fetch(Url, {
                     })
