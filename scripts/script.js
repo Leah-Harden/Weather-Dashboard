@@ -26,7 +26,7 @@ $(document).ready(function() {
                 console.log(data)
                 var lat = data[0].lat
                 var lon = data[0].lon
-
+hi
 
 //this is what i working on
                 $("#DenverBtn").click(function(){
