@@ -8,8 +8,13 @@ var cityList = document.querySelector('#city-List');
 const inpCity = document.getElementById("searchBar");
 const city = inpCity.value;
 
+document.querySelectorAll('button.btn blue').forEach(button => {
+    button.addEventListener('click', searchCity);
+});
 
 
+
+//orlando data
 $(document).ready(function() { 
     $("#form").submit(function(event){
         event.preventDefault();
@@ -27,28 +32,6 @@ $(document).ready(function() {
                 var lat = data[0].lat
                 var lon = data[0].lon
 
-
-//this is what i working on
-                $("#DenverBtn").click(function(){
-                    LatLon =  'lat='+ lat +'&lon=' + lon ;
-                    var Url = startUrl + LatLon + appId
-                    fetch(Url, {
-                })
-                .then((response) => response.json())
-                .then((data) => {
-                    fillingIn(data)
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
-                });
-bv
-//this is what i working on
-
-
-
-
-
             var Url = startUrl + 'lat='+ lat +'&lon=' + lon + appId
                     fetch(Url, {
                     })
@@ -61,13 +44,40 @@ bv
             console.error('Error:', error);
     });
 });
+});         
+});
+//orlando data
 
 
-        });         
 
-});       
 
 //$( "#searchBar" ).submit(function( event ) {});
+
+function searchCity(e) {
+    var city = this.button.textContent
+    cityUrl = geoUrl + city + appIdGeo
+        fetch( cityUrl, {
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data)
+                var lat = data[0].lat
+                var lon = data[0].lon
+                var Url = startUrl + 'lat='+ lat +'&lon=' + lon + appId
+                    fetch(Url, {
+                    })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        console.log("is this working?")
+                    fillingIn(data)
+                        
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+            });
+        };
+
 
 
 
@@ -77,7 +87,12 @@ bv
 
 $( function() {
     var availableTags = [
-        'Orlando'
+        'Orlando',
+        'Atlanta',
+        'Denver',
+        'Beijing',
+        'New York',
+        'Tokyo',
     ];
     $( "#searchBar" ).autocomplete({
         source: availableTags
@@ -141,7 +156,7 @@ $("#avgHumi5").text(data.list[24].main.humidity);
 
 
     
-
+/*
     $("#AtlantaBtn").click(function(){
         LatLon = 'lat=33.753746&lon=-84.386330';
         var Url = startUrl + LatLon + appId
@@ -225,4 +240,4 @@ $("#TokyoBtn").click(function(){
     console.error('Error:', error);
 });
 });
-
+*/
