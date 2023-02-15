@@ -2,7 +2,7 @@
 
 var startUrl = "https://api.openweathermap.org/data/2.5/forecast?" ;
 var appId = '&appid=28c3589b9ea291ef8351565407890153&units=imperial'
-var geoUrl = 'http://api.openweathermap.org/geo/1.0/direct?q='
+var geoUrl = 'https://api.openweathermap.org/geo/1.0/direct?q='
 var appIdGeo ='&limit=1&appid=28c3589b9ea291ef8351565407890153'
 var cityList = document.querySelector('#city-List');
 const inpCity = document.getElementById("searchBar");
