@@ -4,4 +4,5 @@ You can search for any major city in the search bar to get the five date forecas
 
 ![The project deployed](photos/Screenshot.png)
 
+This is the project:
 https://leah-harden.github.io/Weather-Dashboard/
